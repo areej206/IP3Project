@@ -1,0 +1,272 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.slider{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    font: 20px 'Quicksand', Calibri;
+
+}
+.slider form{
+    float: right;
+}
+
+.slider figure div{
+    float: left;
+    width: 20%;
+}
+
+.slider figure img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    background: rgba(236, 230, 219, 255);
+}
+
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    animation: animate 60s infinite;
+}
+
+.slide h1{
+    position: absolute;
+    text-align: left;
+    font-size: 60px;
+    padding-top: 250px;
+    padding-left: 50px;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.slide p{
+    position: absolute;
+    text-align: left;
+    font-size: 20px;
+    padding-top: 350px;
+    padding-left: 50px;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+@keyframes animate{
+    0%{left:0%;}
+    10%{left:0%;}
+    12%{left:-100%;}
+    22%{left:-100%;}
+    24%{left:-200%;}
+    34%{left:-200%;}
+    36%{left:-300%;}
+    46%{left:-300%;}
+    48%{left:-400%;}
+    58%{left:-400%;}
+    60%{left:-300%;}
+    70%{left:-300%;}
+    72%{left:-200%;}
+    82%{left:-200%;}
+    84%{left:-100%;}
+    94%{left:-100%;}
+    96%{left:-0%;}
+}
+
+
+
+.forum {
+    font: 20px 'Quicksand', Calibri;
+    width: 400px;
+    max-width: 400px;
+    margin: 4rem;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    float: right;
+    border-radius: 50px;
+    background: white;
+    position: absolute;
+    z-index: 2;
+    margin-left: 1000px;
+    margin-top: 140px;
+
+}
+
+.form_input,
+.form_button {
+    font: 'Quicksand', Calibri;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.form>*:first-child {
+    margin-top: 0;
+}
+
+.form>*:last-child {
+    margin-bottom: 0;
+}
+
+/* Title Styles */
+.form_title {
+    margin: 2rem 2rem 0 0;
+    text-align: center;
+
+    width: 100%;
+}
+
+/* Success/Error Message Styles (YET TO BE USED) */
+.form_message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form_message--success {
+    color: #4bb544;
+}
+
+.form_message--error {
+    color: #cc3333;
+}
+
+/* Input Styles */
+.form_input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    /* Extremely Important for keeping the labels and text-fields inline*/
+    font-size: 19px;
+}
+
+/* Label Styles */
+label {
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Text-Fields Styles */
+.form_input {
+    object-fit: fill;
+    text-align: left;
+    max-height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(176, 170, 170);
+    outline: none;
+    background: #ffffff;
+    transition: background 0.2s, border-color 0.2s;
+    margin-right: 20px;
+}
+
+/* Drop Down Select Box Styles */
+.form_select {
+    width: 100%;
+    text-align: left;
+    max-height: 36px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+    background: #ece6db;
+    transition: background 0.2s, border-color 0.2s;
+    margin-right: 20px;
+}
+
+.form_input:focus {
+    border-color: #506e53;
+    background: #ffffff;
+}
+
+.form_input--error {
+    color: #cc3333;
+    border-color: #ffffff;
+}
+
+.form_input-error-message {
+    color: #cc3333;
+}
+
+/* Main Button Styles */
+.form_button {
+    width: 236px;
+    margin: 10px;
+    padding: 1rem 1rem;
+    margin-left: 6rem;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    background: #68a66f;
+}
+
+/* Button Interactivity */
+.form_button:hover {
+    background: #486a4c;
+}
+
+.form_button:active {
+    transform: scale(0.98);
+}
+
+/* Back Button Styles */
+.form_back {
+    margin-left: 12rem;
+    height: 20px;
+    width: 60px;
+    padding: 2px;
+    color: #000000;
+    border: solid black 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #afb1af;
+    text-align: center;
+}
+
+/* Specific Enter Button In Forgotten Password Styles */
+#forgotpasswordEnter {
+    width: 146px;
+    height: 65px;
+    margin-bottom: 188px;
+    text-align: center;
+}
+
+/* Back Button Interactivity */
+.form_back:hover {
+    background: #7d7d7d;
+    color: #ffffff;
+}
+
+.form_back:active {
+    transform: scale(0.98);
+}
+
+.form_text {
+    text-align: center;
+    font-size: 18px;
+}
+
+h2{
+    text-align: center;
+}
+
+
+/**
+<div class="container">
+        
+    <div class="outer">
+        
+        <div class="details">
+            <h1>Welcome to Floc</h1>
+
+        </div>
+    </div>
+</div>
