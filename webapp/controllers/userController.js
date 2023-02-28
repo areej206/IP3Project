@@ -129,6 +129,27 @@ exports.home = async function(req, res) {
   }
 }
 
+exports.registerPage = async function(req, res) {
+  if (req.session.user) {
+    // fetch fee of posts for current user
+    let posts = await Post.getFeed(req.session.user._id)
+    res.render('home-dashboard', {posts: posts})
+  } else {
+    res.render('home-guest-register', {regErrors: req.flash('regErrors')})
+  }
+}
+
+exports.loginPage = async function(req, res) {
+  res.render('login', {regErrors: req.flash('regErrors')})
+  // if (req.session.user) {
+  //   // fetch fee of posts for current user
+  //   let posts = await Post.getFeed(req.session.user._id)
+  //   res.render('home-dashboard', {posts: posts})
+  // } else {
+  //   res.render('login', {regErrors: req.flash('regErrors')})
+  // }
+}
+
 exports.ifUserExists = function(req, res, next) {
   User.findByUsername(req.params.username).then(function(userDocument) {
     req.profileUser = userDocument

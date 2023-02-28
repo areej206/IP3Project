@@ -7,6 +7,7 @@ const followController = require('./controllers/followController')
 // user login and sign in related router
 router.get('/', userController.home)
 router.post('/register', userController.register)
+router.get('/signin', userController.registerPage)
 router.post('/login', userController.login)
 router.post('/logout', userController.logout)
 router.post('/doesUsernameExist', userController.doesUsernameExist)
