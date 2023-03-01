@@ -259,3 +259,40 @@ label {
 h2{
   text-align: center;
 }
+
+
+/* 
+/*-- Dami's functional styling code start 
+*/
+
+#flash {
+  opacity: 1;
+  transition: opacity .33s;
+  will-change: opacity;
+}
+
+.liveValidateMessage {
+  transition: all .5s ease-out;
+  top: -6px;
+  position: absolute;
+  z-index: 1;
+  padding-top: 6px;
+  padding-bottom: 16px;
+  opacity: 0;
+  transform: translateY(100%)
+}
+
+.liveValidateMessage--visible {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+@media (min-width: 1200px) {
+
+  .forum {
+      margin-left: 820px;
+      margin-top: 140px;
+      float: right;
+  }
+
+}
