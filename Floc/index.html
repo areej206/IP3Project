@@ -21,6 +21,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="index_maps.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>Homepage</title>
@@ -40,7 +43,7 @@
         </div>
       </div>
 
-      <div id="maps_widget" class="card" alt="test">
+      <div id="maps_widget" class="card">
         <div id="map"></div>
       </div>
 
@@ -91,10 +94,8 @@
       </div>
     </div>
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpd2oRISoDWXwetcIA70tN0FB860W-mdY&callback=initMap&v=weekly"
-      defer
-    ></script>
-    <script src="https://maps.googleapis.com/maps/api/directions/json?origin=AIzaSyDpd2oRISoDWXwetcIA70tN0FB860W-mdY&callback=initMap&v=weekly"></script>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwaZh4LZ9pza24U9ewbCdiLvIh27etaCI&callback=initMap">
+     </script>
   </body>
 </html>
