@@ -25,6 +25,8 @@
     <script src="googleMaps/index_maps.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="weather/font/Rimouski.css">
+    <link rel="stylesheet" href="weather/style.css">
 
     <title>Homepage</title>
   </head>
@@ -47,9 +49,30 @@
         <div id="map"></div>
       </div>
 
-      <div id="calendar_widget" class="card">
+      <div id="weather_widget" class="card">
         <div class="card-body">
-          <h5 class="card-title">Maria H.</h5>
+          <div class="container">
+            <div class="app-title">
+             <h2>   <p>Weather</p></h2>
+            </div>
+            <div class="notification"> </div>
+            <div class="weather-container">
+                <div class="weather-icon">
+                    <img src="weather/icons/unknown.png" alt="">
+                </div>
+                <div class="temperature-value">
+                    <p>- °<span>C</span></p>
+                </div>
+                <div class="temperature-description">
+                    <p> - </p>
+                </div>
+                <div class="location">
+                    <p>-</p>
+                </div>
+            </div>
+        </div>
+        
+        <script src="weather/app.js"></script>
         </div>
       </div>
     </div>
