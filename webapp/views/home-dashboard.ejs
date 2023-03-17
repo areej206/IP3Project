@@ -1,35 +1,83 @@
-<%- include('includes/header-copy') %>
+<%- include('includes/header') %>
 <!-- header included end -->  
-
-  <div class="container py-md-5 container--narrow">
   
   <%- include('includes/flash')%>
-  
-  <div>
-  <a href="/profile/<%= user.username %>" class="mr-2">
-    <img class="avatar-large" title="My Profile" data-toggle="tooltip" data-placement="bottom" style=" border-radius: 50px;" src="<%= user.avatar %>"></a>
-  <a href="#"><%= user.username %></a>
- </div>
 
-  <% if (posts.length) { %>
-    <h2 class="text-center mb-4"> The latest feeds from those you follow </h2> 
-    <div class="list-group">
-      <% posts.forEach(function(post) { %>
-        <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
-          <img class="avatar-tiny" src="<%= post.author.avatar %>">
-          <strong><%= post.title %></strong> <span class="text-muted small">by <%= post.author.username %> on <%= post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate() %>/<%= post.createdDate.getFullYear() %> </span>
-        </a>
-      <% }) %>
+ <div id="container">
+  <div id="profile_widget" class="card">
+    <div class="card-body">
+      <a href="/profile/<%= user.username %>" class="mr-2">
+        <img
+        id="profile_img"
+        class="card-img-top avatar-large" 
+        title="<%= user.username %>" 
+        data-toggle="tooltip" 
+        data-placement="bottom" 
+        style=" border-radius: 50px;" 
+        src="<%= user.avatar %>"></a>
+
+      <a href="/profile/<%= user.username %>"> 
+     <h5 id="name" class="card-title" style="z-index: 10;"><%= user.username %></h5></a>
     </div>
- <%  } else { %>
-    <div class="text-center">
-      <!-- EJS template -->
-      <h2>Hello <strong><%= user.username %></strong>, your feed is empty.</h2>
-      <p class="lead text-muted">Your feed displays the latest posts from the people you follow. If you don&rsquo;t have any friends to follow that&rsquo;s okay; you can use the &ldquo;Search&rdquo; feature in the top menu bar to find content written by people with similar interests and then follow them.</p>
-    </div>  
-  <%  } %>
+  </div>
+
+  <div id="maps_widget" class="card">
+    <div id="map"></div>
+  </div>
+
+  <div id="calendar_widget" class="card">
+    <div class="card-body">
+      <h5 class="card-title">Maria H.</h5>
+    </div>
+  </div>
+</div>
+<!-- <div id="calendar_widget" class="card">
+    <div class="card-body">
+        <h5 class="card-title">Maria H.</h5>
+    </div>
+</div> -->
+
+<div id="container2">
+  <div id="widget4" class="card">
+    <img src="images/calendar.png" id="" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 id="name" class="card-title"></h5>
+    </div>
+  </div>
+
+  <div id="widget5" class="card">
+   
+  <!-- forum section -->
+  <%- include('./forum') %>
+  <!-- forum section -->
 
   </div>
+
+  <div id="widget6" class="card">
+    <img
+      src="images/glasgow.jpg"
+      id="attraction"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Kelvin Grove Art Gallery</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the
+        bulk of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+<div id="widget7" class="card">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+
+  </div>
+</div>
+
   
   <!-- footer begins -->
   <%- include('includes/footer') %>
