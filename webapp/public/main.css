@@ -63,7 +63,6 @@ body {
   padding-left: 50px;
   width: 100%;
   height: 100vh;
-  
 }
 
 @keyframes animate{
@@ -257,9 +256,9 @@ label {
   font-size: 18px;
 }
 
-h2{
+/* h2 {
   text-align: center;
-}
+} */
 
 
 /* dashboard css start */
@@ -274,11 +273,12 @@ h2{
 #name {
   color: black;
   margin-right: .9rem;
+  font-size: .9rem;
 }
 
 #profile_widget {
   width: 18rem;
-  height: 15rem;
+  height: 10rem;
   text-align: center;
   border-radius: 10%;
 }
@@ -286,6 +286,7 @@ h2{
 .profile--widget--bottom {
   justify-content: center;
   display: flex;
+  margin-top: 0;
 }
 
 #maps_widget {
@@ -304,39 +305,38 @@ h2{
 
 #calendar_widget {
   width: 20rem;
-  height: 14rem;
   text-align: center;
   border-radius: 15%;
 }
 
 #container {
   display: flex;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   align-content: left;
   justify-content: left;
-  /* padding-left: 10px; */
 }
 
-#container div {
+/* #container div {
   margin: 15px;
-}
+} */
 
 #container2 {
   display: flex;
-  background-color: aliceblue;
+  flex-wrap: wrap;
+  /* background-color: aliceblue; */
   align-content: left;
   justify-content: left;
-  padding-left: 10px;
+  margin-top: 1rem;
+  /* padding-left: 10px; */
 }
 
 #container2 div {
-  margin: 15px;
+  /* margin: 15px; */
   align-items: left;
 }
 
 #widget4 {
   width: 18rem;
-  height: 12rem;
   text-align: center;
   border-radius: 10%;
 }
@@ -347,23 +347,16 @@ h2{
 }
 
 #widget6 {
-  width: 25rem;
-  height: 23rem;
-  text-align: center;
-  border-radius: 15%;
-  text-align: left;
+  /* width: 25rem;
+  height: 23rem; */
+  /* border-radius: 15%; */
 }
 
-#widget6 p {
-  font-size: 14px;
-}
-
-#attraction {
+/* #attraction {
   width: 12rem;
   height: 8rem;
-
   align-content: center;
-}
+} */
 
 /**CALENDER STYLE**/
 /**CALENDER STYLE**/
