@@ -3,8 +3,10 @@
   
   <%- include('includes/flash')%>
 
+  <!-- First raw section :: Profile, Map begin  -->
+  <!-- First raw section :: Profile, Map begin  -->
  <div id="container">
-  <div id="profile_widget" class="card">
+  <div class="card" id="profile_widget">
     <div class="card-body">
       <a href="/profile/<%= user.username %>" class="mr-2">
         <img
@@ -16,12 +18,24 @@
         style=" border-radius: 50px;" 
         src="<%= user.avatar %>"></a>
 
-      <a href="/profile/<%= user.username %>"> 
-     <h5 id="name" class="card-title" style="z-index: 10;"><%= user.username %></h5></a>
-    </div>
+        <div class="profile--widget--bottom">
+          <a href="/profile/<%= user.username %>"><h5 id="name" class="" style="z-index: 10;"><%= user.username %></h5></a>
+          <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment" style="color: black"></i></span>
+        </div>
+  
+     <div class="profile--widget--bottom">
+      <!-- Gravatar API SRC= -->
+      <a class="btn btn-sm btn-success mr-2" href="/create-post">Create Post</a>
+      <!-- Session logout ACTION=/LOGOUT -->
+      <form action="/logout" method="POST" class="d-inline">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button class="btn btn-sm btn-secondary">Sign Out</button>
+      </form>
+    </div>  
   </div>
+ </div>
 
-  <div id="maps_widget" class="card">
+  <div id="maps_widget">
     <div id="map"></div>
   </div>
 
@@ -30,12 +44,11 @@
       <h5 class="card-title">Maria H.</h5>
     </div>
   </div>
+
 </div>
-<!-- <div id="calendar_widget" class="card">
-    <div class="card-body">
-        <h5 class="card-title">Maria H.</h5>
-    </div>
-</div> -->
+  <!-- First raw section :: Profile, Map END  -->
+  <!-- First raw section :: Profile, Map END  -->
+
 
 <div id="container2">
   <div id="widget4" class="card">
@@ -44,6 +57,7 @@
       <h5 id="name" class="card-title"></h5>
     </div>
   </div>
+
 
   <div id="widget5" class="card">
    
@@ -71,12 +85,15 @@
   </div>
 </div>
 
-<div id="widget7" class="card">
+<!-- 
+<div class="card">
   <div class="card-body">
-    <h5 class="card-title"></h5>
+    <h5 class="card-title">
+      emergency contact detail
+    </h5>
 
   </div>
-</div>
+</div> -->
 
   
   <!-- footer begins -->
