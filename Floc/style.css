@@ -497,8 +497,8 @@ h2 {
 }
 
 #map {
-  width: 640px;
-  height: 300px;
+  width: inherit;
+  height: inherit;
   border-radius: 10%;
 }
 
