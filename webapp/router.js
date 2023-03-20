@@ -4,6 +4,9 @@ const userController = require('./controllers/userController')
 const postController = require('./controllers/postController')
 const followController = require('./controllers/followController')
 
+// community
+router.get('/community', userController.community)
+
 // user login and sign in related router
 router.get('/', userController.home)
 router.post('/register', userController.register)
