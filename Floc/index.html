@@ -1,51 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="googleMaps/index_maps.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="weather/font/Rimouski.css">
-    <link rel="stylesheet" href="weather/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="googleMaps/index_maps.js"></script>
 
-    <title>Homepage</title>
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="weather/font/Rimouski.css">
+  <link rel="stylesheet" href="weather/style.css">
 
-  <body>
-    <div id="container">
-      <div id="profile_widget" class="card">
-        <img
-          src="images/p1.jpeg"
-          id="profile_img"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 id="name" class="card-title">Maria H.</h5>
+  <title>Homepage</title>
+</head>
+
+<body>
+
+  <section class="gridcontainer">
+
+    <div>
+      <img class="menu_icon item" src="./images/menu_icon.png">
+    </div>
+
+    <div class="profile_widget item1">Profile</div>
+
+    <div id="map" class="maps_widget item2"></div>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwaZh4LZ9pza24U9ewbCdiLvIh27etaCI&callback=initMap">
+    </script>
+
+    <div class="weather_widget item3">
+      <!-- <div class="app-title"> -->
+      <div class="location">
+        <p>-</p>
+      </div>
+      <!-- </div> -->
+      <div class="notification"> </div>
+      <div class="weather-container">
+        <div class="weather-icon">
+          <img src="weather/icons/unknown.png" alt="">
+        </div>
+        <div class="temperature-value">
+          <p>- °<span>C</span></p>
+        </div>
+        <div class="temperature-description">
+          <p> - </p>
         </div>
       </div>
+    </div>
 
-      <div id="maps_widget" class="card">
+    <script defer src="weather/app.js"></script>
+
+
+    <div class="calendar_widget item4"> Calendar </div>
+
+    <div class="emercency_services_widget item5"> Emercency Services </div>
+
+    <div class="forum_widget item6"> Forum </div>
+
+    <div class="attractions_widget item7"> Attracrions </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- 
+  <div id="container">
+    <div id="profile_widget" class="card">
+      <img src="images/p1.jpeg" id="profile_img" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 id="name" class="card-title">Maria H.</h5>
+      </div>
+    </div> -->
+
+    <!-- <div id="maps_widget" class="card">
         <div id="map"></div>
       </div>
 
@@ -70,56 +112,51 @@
                     <p>-</p>
                 </div>
             </div>
-        </div>
-        
-        <script defer src="weather/app.js"></script>
-    
-        </div>
-      </div>
-    </div>
-    <!-- <div id="calendar_widget" class="card">
+        </div> 
+
+    <script defer src="weather/app.js"></script>
+-->
+<!-- 
+  </div>
+  </div>
+  </div> -->
+  <!-- <div id="calendar_widget" class="card">
         <div class="card-body">
             <h5 class="card-title">Maria H.</h5>
         </div>
     </div> -->
-    <div id="container2">
-      <div id="widget4" class="card">
-        <img src="images/calendar.png" id="" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 id="name" class="card-title"></h5>
-        </div>
-      </div>
-
-      <div id="widget5" class="card">
-        <img src="images/" id="map" class="card-img-top" alt="..." />
-      </div>
-
-      <div id="widget6" class="card">
-        <img
-          src="images/glasgow.jpg"
-          id="attraction"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Kelvin Grove Art Gallery</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="widget7" class="card">
+   <!--<div id="container2">
+    <div id="widget4" class="card">
+      <img src="images/calendar.png" id="" class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title"></h5>
+        <h5 id="name" class="card-title"></h5>
       </div>
     </div>
 
-    <script async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwaZh4LZ9pza24U9ewbCdiLvIh27etaCI&callback=initMap">
-     </script>
-  </body>
+    <div id="widget5" class="card">
+      <img src="images/" id="map" class="card-img-top" alt="..." />
+    </div>
+
+    <div id="widget6" class="card">
+      <img src="images/glasgow.jpg" id="attraction" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Kelvin Grove Art Gallery</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="widget7" class="card">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+    </div>
+  </div> -->
+
+  
+</body>
+
 </html>
