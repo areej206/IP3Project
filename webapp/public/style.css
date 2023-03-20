@@ -2,21 +2,11 @@
 /*-- Dami's functional styling code start 
 */
 
-.wrapper {
-  /* width: 100%; */
-  background-color: aliceblue;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
 
 .header-container-visible {
     display: none;
 }
    
-.dash-container {
-     /* margin: 0 auto; */
- }
    
 .avatar-large {
      width: 60px;

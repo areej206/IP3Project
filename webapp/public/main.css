@@ -2,13 +2,24 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  /* background-color: #b4ceaa; */
-  font-family: "Quicksand", "Calibri";
+  background-color: #b4ceaa;
+  font: 20px "Quicksand", "Calibri";
 }
+
+
+h1 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+/* Index page  */
+/* Index page  */
+/* Index page  */
 
 .slider{
   overflow: hidden;
@@ -16,7 +27,7 @@ body {
   height: 100vh;
   position: absolute;
   z-index: 1;
-  font: 20px 'Quicksand', Calibri;
+  font: 20px 'Quicksand', "Calibri";
 
 }
 
@@ -86,7 +97,7 @@ body {
 }
 
 .forum {
-  font: 20px 'Quicksand', Calibri;
+  font: 20px 'Quicksand', "Calibri";
   width: 400px;
   max-width: 400px;
   margin: 4rem;
@@ -103,7 +114,7 @@ body {
 
 .form_input,
 .form_button {
-  font: 'Quicksand', Calibri;
+  font: 'Quicksand', "Calibri";
 }
 
 .form-hidden {
@@ -256,208 +267,215 @@ label {
   font-size: 18px;
 }
 
-/* h2 {
-  text-align: center;
-} */
-
-
 /* dashboard css start */
 /* dashboard css start */
 /* dashboard css start */
 
-#profile_img {
-  border-radius: 50%;
-  position: relative;
-}
+         /* Layout */
+        
+        .gridcontainer {
+          display: grid;
+          grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 5em;
+          grid-auto-rows: 9.75em;
+          font-family: Arial, Helvetica, sans-serif;
+      }
 
-#name {
-  color: black;
-  margin-right: .9rem;
-  font-size: .9rem;
-}
+      div {
+          text-align: center;
+          font-weight: bolder;
+          font-size: 90px;
+          margin: 10px;
+          font-size: 40px;
 
-#profile_widget {
-  width: 18rem;
-  height: 10rem;
-  text-align: center;
-  border-radius: 10%;
-}
+      }
 
-.profile--widget--bottom {
-  justify-content: center;
-  display: flex;
-  margin-top: 0;
-}
+      .menu_item{
+          margin-top: -20px;     
+      }
 
-#maps_widget {
-  padding: 0rem;
-  border-radius: 10%;
-  border: solid 1px #D2D2D2;
-  background-color: white;
-}
+      .profile_widget {
+          /* border: 3px solid #46593f; */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+        }
+
+      .maps_widget {
+          /* border: 3px solid rgb(139, 0, 93); */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+
+      }
+
+          .weather_widget {
+          /* border: 3px solid purple; */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+
+      }
+
+      .calendar_widget {
+          /* border: 3px solid green; */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+
+      }
+
+      .emercency_services_widget {
+          /* border: 3px solid salmon; */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+
+      }
+
+      .forum_widget {
+          /* border: 3px solid green; */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+
+      }
+
+      .attractions_widget {
+          /* border: 3px solid salmon; */
+          background-color: white;
+          border-radius: 15%;
+          box-shadow: 0 0 8px rgb(56, 77, 48);
+
+      }
+
+      .item {
+          grid-row: 1 / span 1;
+      }
+
+      .item1 {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 2;
+      }
+
+      .item2 {
+          grid-column: 3 / span 2;
+          grid-row: 1 / span 3;
+          /* grid-row: 4 / span 2; */
+
+      }
+
+      .item3 {
+          grid-column: 5 / span 1;
+          grid-row: 1 / span 2;
+
+      }
+
+      .item4 {
+          grid-column: 1 / span 2;
+
+          grid-row: 3 / span 2;
+
+          /* grid-column: 3 / span 1; */
+      }
+
+      .item5 {
+          grid-column: 1 / span 2;
+
+          grid-row: 5 / span 1;
+
+          /* grid-column: 3 / span 1; */
+      }
+
+
+      .item6 {
+          grid-column: 3 / span 2;
+          grid-row: 4 / span 2;
+      }
+
+      .item7 {
+          grid-column: 5 / span 1;
+          grid-row: 3 / span 3;
+
+      }
+
+/* Map */
+/* Map */
+/* Map */
 
 #map {
-  width: 640px;
-  height: 300px;
-  border-radius: 10%;
-  z-index: 100;
+font-family: Arial, Helvetica, sans-serif;
 }
 
-#calendar_widget {
-  width: 20rem;
-  text-align: center;
-  border-radius: 15%;
+/* Weather */
+/* Weather */
+/* Weather */
+
+.notification{
+display: none;
 }
 
-#container {
-  display: flex;
-  /* background-color: aliceblue; */
-  align-content: left;
-  justify-content: left;
+.notification p{
+color: #d40c20;
+font-size: 20px;
+margin: 0;
+text-align: center;
+padding: 0 0;
 }
 
-/* #container div {
-  margin: 15px;
-} */
-
-#container2 {
-  display: flex;
-  flex-wrap: wrap;
-  /* background-color: aliceblue; */
-  align-content: left;
-  justify-content: left;
-  margin-top: 1rem;
-  /* padding-left: 10px; */
+.weather-container{
+width: 325px;
+height: 190px;
 }
 
-#container2 div {
-  /* margin: 15px; */
-  align-items: left;
+.location p{
+margin: 0;
+padding: 10px;
+color: #293251;
+text-align: center;
+font-size: 20px;
 }
 
-#widget4 {
-  width: 18rem;
-  text-align: center;
-  border-radius: 10%;
+.weather-icon{
+width: 300px;
+height: 100px;
 }
 
-#widget5 {
-  /* height: 22rem; */
-  border-radius: 8%;
+.weather-icon img{
+display: block;
+margin: 0 auto;
 }
 
-#widget6 {
-  /* width: 25rem;
-  height: 23rem; */
-  /* border-radius: 15%; */
+.temperature-value{
+width: 300px;
+height: 20px;
 }
 
-/* #attraction {
-  width: 12rem;
-  height: 8rem;
-  align-content: center;
-} */
+.temperature-value p{
+padding: 0;
+margin: 0;
+color: #293251;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+font-family: Arial, Helvetica, sans-serif;
 
-/**CALENDER STYLE**/
-/**CALENDER STYLE**/
-/**CALENDER STYLE**/
-
-/* .container {
-  width: 100%;
-  height: 100vh;
-  background-color: turquoise;
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.calendar {
-  width: 45rem;
-  height: 52rem;
-  background-color: #181617;
-  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
-.month {
-  width: 100%;
-  height: 12rem;
-  background-color: darkolivegreen;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  text-align: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+.temperature-value span{
+color: #293251;
+font-size: 20px;
 }
 
-.month i {
-  font-size: 2.5rem;
-  cursor: pointer;
+.temperature-description p{
+/* padding: 8px; */
+margin: 0;
+color: #293251;
+text-align: center;
+font-size: 20px;
 }
 
-.month h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-bottom: 1rem;
-}
 
-.month p {
-  font-size: 1.6rem;
-}
 
-.weekdays {
-  width: 100%;
-  height: 5rem;
-  padding: 0 0.4rem;
-  display: flex;
-  align-items: center;
-}
 
-.weekdays div {
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-
-.days {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.2rem;
-}
-
-.days div {
-  font-size: 1.4rem;
-  margin: 0.3rem;
-  width: calc(40.2rem / 7);
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(236, 228, 228, 0.5);
-  transition: background-color 0.2s;
-}
-
-.days div:hover:not(.today) {
-  background-color: #b47017;
-  border: 0.2rem solid #777;
-  cursor: pointer;
-}
-
-.prev-date,
-.next-date {
-  opacity: 0.5;
-}
-
-.today {
-  background-color: #0a9f8d;
-}
 

@@ -3,110 +3,68 @@
   
   <%- include('includes/flash')%>
 
-<div class="wrapper">
-  <!-- First raw section :: Profile, Map begin  -->
-  <!-- First raw section :: Profile, Map begin  -->
-  <div id="container" class="row-gap-3 gap-0 column-gap-3">
-  <div class="card" id="profile_widget">
-    <div class="card-body">
-      <a href="/profile/<%= user.username %>" class="mr-2">
-        <img
-        id="profile_img"
-        class="card-img-top avatar-large" 
-        title="<%= user.username %>" 
-        data-toggle="tooltip" 
-        data-placement="bottom" 
-        style=" border-radius: 50px;" 
-        src="<%= user.avatar %>"></a>
-      
-        <div class="profile--widget--bottom">
-          <a href="/profile/<%= user.username %>"><h5 id="name" class="" style="z-index: 10;"><%= user.username %></h5></a>
-          <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment" style="color: black"></i></span>
-        </div>
-  
-     <div class="profile--widget--bottom">
-      <!-- Gravatar API SRC= -->
-      <a class="btn btn-success mr-2" 
-      style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-      href="/create-post">Create Post</a>
-      <!-- Session logout ACTION=/LOGOUT -->
-      <form action="/logout" method="POST" class="d-inline">
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <button class="btn btn-secondary"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-        >Sign Out</button>
-      </form>
-    </div>  
-  </div>
- </div>
+  <section class="gridcontainer">
 
-  <div id="maps_widget">
-    <div id="map"></div>
-  </div>
-
-  <div id="calendar_widget" class="card">
-    <div class="card-body">
-      <h5 class="card-title">Maria H.</h5>
+    <div>
+      <img class="menu_icon item" src="/images/menu_icon.png">
     </div>
-  </div>
 
-</div>
+    <div class="profile_widget item1">
 
-  <!-- First raw section :: Profile, Map END  -->
-  <!-- First raw section :: Profile, Map END  -->
+          <a href="/profile/<%= user.username %>" class="mr-2">
+              <img
+              id="profile_img"
+              class="avatar-large" 
+              title="<%= user.username %>" 
+              data-toggle="tooltip" 
+              data-placement="bottom" 
+              style=" border-radius: 50px;" 
+              src="<%= user.avatar %>"></a>
+            
+                <a href="/profile/<%= user.username %>"><h5 id="name" class="" style="z-index: 10;"><%= user.username %></h5></a>
+                <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment" style="color: black"></i></span>  
 
+    </div>
 
-  <div id="container2" class="row row-cols-1 row-cols-md-3 g-4">
+    <div id="map" class="maps_widget item2"></div>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwaZh4LZ9pza24U9ewbCdiLvIh27etaCI&callback=initMap">
+    </script>
 
-    <div class="col">
-      <div class="card h-100">
-        <div class="card-body">
-          <img src="images/calendar.png" id="" class="card-img-top" alt="..." />
+    <div class="weather_widget item3">
+      <!-- <div class="app-title"> -->
+      <div class="location">
+        <p>-</p>
+      </div>
+      <!-- </div> -->
+      <div class="notification"> </div>
+      <div class="weather-container">
+        <div class="weather-icon">
+          <img src="weather/icons/unknown.png" alt="">
+        </div>
+        <div class="temperature-value">
+          <p>- °<span>C</span></p>
+        </div>
+        <div class="temperature-description">
+          <p> - </p>
         </div>
       </div>
     </div>
 
-    <div class="col" >
-      <div class="card h-100" >
-        <img
-      src="images/glasgow.jpg"
-      id="attraction"
-      class="card-img-top"
-      alt="..."/>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-         <button class="btn btn-primary"> link </button>
-        </div>
- 
+    <script defer src="weather/app.js"></script>
+
+
+    <div class="calendar_widget item4"> Calendar </div>
+
+    <div class="emercency_services_widget item5"> Emercency Services </div>
+
+    <div class="forum_widget item6">
+      <%- include('./forum') %>
       </div>
-    </div>
 
-      <!-- forum section -->
-      <div class="col">
-        <div class="card">
-        <%- include('./forum') %>
-      </div>
-      </div>
-      <!-- forum section -->   
- </div>
+    <div class="attractions_widget item7"> Attracrions </div>
+  </section>
 
-
-
-
-</div>
-
-<!-- 
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">
-      emergency contact detail
-    </h5>
-
-  </div>
-</div> -->
-
-</div>
 
   <!-- footer begins -->
   <%- include('includes/footer') %>
