@@ -2,19 +2,58 @@
 /*-- Dami's functional styling code start 
 */
 
+body, .tooltip
+ {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+.flex--box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-chat-icon i {
+  align-self: center;
+  text-align: center;
+}
+
+.flex--box span {
+  align-self: center;
+  text-align: left;
+}
+
+[class^="icon"], [class*="-icon"] {
+  display: inline-block;
+  text-align: center;
+  /* width: 100%; */
+  margin-top: -20px;
+  margin-left: 15px;
+}
+
+
+.tooltip {
+  font-size: .9rem;
+}
 
 .header-container-visible {
     display: none;
 }
+  
+.profile--widget {
+  margin-top: 50px;
+}
    
-   
+/* .header-chat-icon {
+  cursor: pointer;
+  position: relative;
+} */
+
 .avatar-large {
-     width: 60px;
-     height: 60px;
-     margin-bottom: 0;
-     /* margin-right: 5px; */
+     width: 100px;
+     height: 100px;
+     margin-bottom: 10px;
      position: relative;
-     /* top: -10px; */
 }
    
 .avatar-small {
@@ -36,6 +75,9 @@
    }
    
    
+/* Forum  */
+
+
    #flash {
      opacity: 1;
      transition: opacity .33s;
@@ -127,7 +169,7 @@
      position: relative;
      display: flex;
      align-items: center;
-     padding-top: 15px;
+     /* padding-top: 15px; */
      padding-bottom: 15px;
    }
    
@@ -203,13 +245,8 @@
    }
    
    .header-search-icon {
-     position: relative;
-     top: 3px;
-   }
-   
-   .header-search-icon {
-     position: relative;
-     top: 3px;
+     /* position: relative; */
+     top: -5px;
    }
    
    /* End Search Overlay */

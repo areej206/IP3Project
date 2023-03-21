@@ -119,7 +119,7 @@ let Post = function(data, userid, requestedPostId) {
       ], visitorId)
   
       if (posts.length) {
-      //  console.log(posts[0])
+       console.log(posts[0])
         resolve(posts[0])
       } else {
         reject()
@@ -132,7 +132,6 @@ let Post = function(data, userid, requestedPostId) {
       {$match: {author: authorId}},
       {$sort: {createdDate: -1}} // -1 descending order
     ])
-    
   }
 
   Post.delete = function(postIdToDelete, currentUserId) {
@@ -171,15 +170,29 @@ Post.countPostsByAuthor = function (id) {
     })
 }
 
-// Post.getFeed = async function(id, visitorId) {
-//     await new Promise(async (resolve, reject) => {
-//             let posts = await Post.reusablePostQuery([
-//             {$match: {author: id}}
-//             ], visitorId, [{$sort: {createdDate: -1}}])
-//             console.log(posts[0])
-//             resolve(posts)
-//     })
-// }
+Post.getForumFeed = async function(id) {
+  let allUsers = await followsCollection.find({authorId: new ObjectID(id)}).toArray()
+    allUsers = allUsers.map(function(followDoc) {
+        return followDoc.followedId
+        console.log(allUsers)
+    })
+    return Post.reusablePostQuery([
+      {$match: {author: {$in: allUsers }}},
+      {$sort: {createdDate: -1}}
+    ])
+    // await new Promise(async (resolve, reject) => {
+    // let posts = await Post.reusablePostQuery([
+    // {$match: {author: id}}, 
+    // {$sort: {createdDate: -1}}
+    //   ])
+    //         if (posts.length) {
+    //           console.log(posts)
+    //            resolve(posts)
+    //          } else {
+    //            reject()
+    //          }
+    // })
+}
 
 Post.getFeed = async function(id) {
     // create an array of the user id that the current user follows

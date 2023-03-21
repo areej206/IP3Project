@@ -2,12 +2,13 @@
     <p class="m-0">Copyright &copy; <%= new Date().getFullYear() %> <a href="/" class="text-muted">FLOC</a>. All rights reserved.</p>
   </footer>
 
+    <!-- Functionality chat script -->
     <% if (user) { %>
       <div id="chat-wrapper" class="chat-wrapper shadow border-top border-left border-right"> </div>
       <script src="/socket.io/socket.io.js"> </script>
     <%  } %>
+      <!-- Functionality chat script -->
   
-
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwaZh4LZ9pza24U9ewbCdiLvIh27etaCI&callback=initMap">
    </script>

@@ -10,10 +10,9 @@
     </div>
 
     <div class="profile_widget item1">
-
+      <div class="profile--widget">
           <a href="/profile/<%= user.username %>" class="mr-2">
               <img
-              id="profile_img"
               class="avatar-large" 
               title="<%= user.username %>" 
               data-toggle="tooltip" 
@@ -21,9 +20,11 @@
               style=" border-radius: 50px;" 
               src="<%= user.avatar %>"></a>
             
-                <a href="/profile/<%= user.username %>"><h5 id="name" class="" style="z-index: 10;"><%= user.username %></h5></a>
-                <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment" style="color: black"></i></span>  
-
+              <div class="flex--box d-flex justify-content-center">
+                <a href="/profile/<%= user.username %>" id="name" class="mr-2 text-center" style="z-index: 10; font-size: 1.4rem;"><%= user.username %></a>
+                <span class="header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment" style="font-size: .9rem; color: black;"></i></span>  
+              </div>
+              </div>
     </div>
 
     <div id="map" class="maps_widget item2"></div>
