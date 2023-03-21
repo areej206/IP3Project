@@ -77,6 +77,19 @@ body, .tooltip
    
 /* Forum  */
 
+.forum--list-group a {
+  text-align: left;
+  font-size: .9rem;
+}
+.forum--tilte {
+  font-size: 1.6rem;
+  /* margin-bottom: 15px; */
+}
+
+.forum--bottom span{
+  font-size: .9rem;
+  text-align: left;
+}
 
    #flash {
      opacity: 1;
