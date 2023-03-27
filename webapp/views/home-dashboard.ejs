@@ -1,6 +1,5 @@
 <%- include('includes/header') %>
 <!-- header included end -->  
-  
   <%- include('includes/flash')%>
 
   <section class="gridcontainer">
@@ -41,7 +40,7 @@
       <div class="notification"> </div>
       <div class="weather-container">
         <div class="weather-icon">
-          <img src="weather/icons/unknown.png" alt="">
+          <!-- <img src="weather/icons/unknown.png" alt=""> -->
         </div>
         <div class="temperature-value">
           <p>- °<span>C</span></p>
@@ -55,15 +54,15 @@
     <script defer src="weather/app.js"></script>
 
 
-    <div class="calendar_widget item4"> Calendar </div>
+    <div class="calendar_widget item4"> <h1> Calendar </h1> </div>
 
-    <div class="emercency_services_widget item5"> Emercency Services </div>
+    <div class="emercency_services_widget item5"><h1> Emercency Services </h1> </div>
 
     <div class="forum_widget item6">
       <%- include('./forum') %>
       </div>
 
-    <div class="attractions_widget item7"> Attracrions </div>
+    <div class="attractions_widget item7"> <h1> Attracrions </h1> </div>
   </section>
 
 
