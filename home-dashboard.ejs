@@ -46,7 +46,6 @@
             <div class="weather-icon">
               <img src="weather/icons/unknown.png" alt="">
             </div>
-        </a>
         <div class="temperature-value">
           <p>- °<span>C</span></p>
         </div>
@@ -54,6 +53,8 @@
           <p> - </p>
         </div>
       </div>
+    </a>
+
       </div>
 
       <script defer src="weather/app.js"></script>
@@ -63,14 +64,42 @@
 
       <div class="calendar_widget item4">
         <a id="link" href="/calendar.html">
-          Calendar
+          
           <!-- Insert Calendar Widget here -->
+          <!-- <div class="leftWiget"> -->
+            <div class="calendarWiget">
+              <div class="monthWiget">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">Mar 2023</div>
+                <i class="fas fa-angle-right next"></i>
+              </div>
+              <div class="weekdaysWiget">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+              <div class="daysWiget"></div>
+              <div class="goto-todayWiget">
+                <div class="gotoWiget">
+                  <input type="text" placeholder="mm/yyyy" class="date-input" />
+                  <button class="goto-btnWiget">Go</button>
+                </div>
+                <!-- <button class="today-btnWiget">Today</button> -->
+              </div>
+            </div>
+          <!-- </div> -->
 
+          
+    
         </a>
       </div>
       <!-- Insert Calendar Widget Script here -->
-
-
+      <script src="calendar/fullscript.js"></script>
+      <!-- <script src="/caledar/script2.js"></script> -->
 
 
       <div class="emercency_services_widget item5">
@@ -86,10 +115,8 @@
 
 
       <div class="forum_widget item6">
-        <a id="link" href="community.ejs">
 
           <%- include('./forum') %>
-        </a>
       </div>
 
 

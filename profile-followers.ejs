@@ -1,0 +1,27 @@
+<%- include('includes/header') %>
+
+<article class="flexContainer">
+  <div>
+    <img class="menu_icon item" src="/images/menu_icon.png">
+  </div>
+  <div class="title">
+    <h1 class="title">Profile</h1>
+  </div>
+</article>
+
+<div class="container py-md-5 container--narrow">
+
+  <%- include('includes/flash') %>
+  <%- include('includes/profileShared') %>
+
+  <div class="list-group">
+    <% followers.forEach(function(follower) { %>
+      <a href="/profile/<%= follower.username %>" class="list-group-item list-group-item-action">
+        <img class="avatar-small" src="<%= follower.avatar %>">
+   <%= follower.username %>
+    </a>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('includes/footer') %>
