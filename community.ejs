@@ -4,92 +4,98 @@
 
 
     <body>
-      <main>
+      <div class="Community-background-image">
+        <div class="overlay">
 
-        <article class="flexContainer">
-          <div>
-            <img class="menu_icon item" src="./images/menu_icon.png">
-          </div>
-          <div class="title">
-            <h1 class="title">Community</h1>
-          </div>
-        </article>
+          <main>
 
-
-
-        <div id="container" class="dash-container">
-
-          <% if (posts.length) { %>
-
-        <article class="flexContainer">
-
-            <a id="addPost" class="btn btn-success mr-2"
-                  href="/create-post">+
-          </a>
-
-            <p id="search" class="text-center mb-4"><i class="fas fa-search"></i> Search for
-              questions, people
-              and topics
-              <a id="search-small" href="#" class="text-white mr-2 header-search-icon" title="Search"
-                data-toggle="tooltip" data-placement="bottom"></a>
-            </p>
-          </article>
+            <article class="flexContainer">
+              <div>
+                <img class="menu_icon item" src="./images/menu_icon.png">
+              </div>
+              <div class="title">
+                <h1 class="title">Community</h1>
+              </div>
+            </article>
 
 
-            <div id="post_container" class="list-group">
-              <% posts.forEach(function(post) { %>
-                <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
+            <div id="container" class="dash-container">
 
-                  <p id="post" style="font-weight: 100;">
-                    <article class="flexContainer">
-                      <div>
-                        <img class="avatar-tiny" src="<%= post.author.avatar %>">
-                      </div>
+              <% if (posts.length) { %>
 
-                      <div id="post_header">
-                        <div id="post_username">
-                          <%= post.author.username %>
-                        </div>
-                        <div id="post_date">
-                          <%= post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate() %>/<%=
-                                post.createdDate.getFullYear() %>
+                <article class="flexContainer">
 
-                        </div>
-                    </article>
+                  <a id="addPost" class="btn btn-success mr-2"       href="/create-post">+
+                  </a>
 
-                    <div id="post_body">
-                      <div id="post_title">
-                        <%= post.title %>
-                      </div>
-
-                      <div id="post_content">
-                        <%= post.body %>
-                      </div>
-                    </div>
+                  <p id="search" class="text-center mb-4"><i class="fas fa-search"></i> Search for
+                    questions, people
+                    and topics
+                    <a id="search-small" href="#" class="text-white mr-2 header-search-icon" title="Search"
+                      data-toggle="tooltip" data-placement="bottom"></a>
                   </p>
+                </article>
 
-                </a>
-                <% }) %>
+
+                <div id="post_container" class="list-group">
+                  <% posts.forEach(function(post) { %>
+                    <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
+
+                      <p id="post" style="font-weight: 100;">
+                        <article class="flexContainer">
+                          <div>
+                            <img class="avatar-tiny" src="<%= post.author.avatar %>">
+                          </div>
+
+                          <div id="post_header">
+                            <div id="post_username">
+                              <%= post.author.username %>
+                            </div>
+                            <div id="post_date">
+                              <%= post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate() %>/<%=
+                                    post.createdDate.getFullYear() %>
+
+                            </div>
+                        </article>
+
+                        <div id="post_body">
+                          <div id="post_title">
+                            <%= post.title %>
+                          </div>
+
+                          <div id="post_content">
+                            <%= post.body %>
+                          </div>
+                        </div>
+                      </p>
+
+                    </a>
+                    <% }) %>
+                </div>
+
+                <% } else { %>
+                  <div class="text-center">
+                    <!-- EJS template -->
+                    <h2>Hello <strong>
+                        <%= user.username %>
+                      </strong>, your feed is empty.</h2>
+                    <p class="lead text-muted">Your feed displays the latest posts from the people you follow. If you
+                      don&rsquo;t have any friends to follow that&rsquo;s okay; you can use the &ldquo;Search&rdquo;
+                      feature
+                      in the top menu bar to find content written by people with similar interests and then follow them.
+                    </p>
+                  </div>
+                  <% } %>
+
+
             </div>
 
-            <% } else { %>
-              <div class="text-center">
-                <!-- EJS template -->
-                <h2>Hello <strong>
-                    <%= user.username %>
-                  </strong>, your feed is empty.</h2>
-                <p class="lead text-muted">Your feed displays the latest posts from the people you follow. If you
-                  don&rsquo;t have any friends to follow that&rsquo;s okay; you can use the &ldquo;Search&rdquo; feature
-                  in the top menu bar to find content written by people with similar interests and then follow them.</p>
-              </div>
-              <% } %>
 
-                
+
+
+          </main>
         </div>
-
-
-
-      </main>
+      </div>
     </body>
 
     <!-- footer begins -->

@@ -1,0 +1,825 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin: auto;
+    /* font-weight: bold; */
+    font-size: 20px;
+
+}
+
+#link {
+    text-decoration: none;
+}
+
+#container {
+
+
+    width: 90%;
+    border: 1px solid;
+    margin: 30px auto auto auto;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Layout */
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5em;
+    grid-auto-rows: 7.7em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+div {
+    /* text-align: center;
+  font-weight: bolder;
+  font-size: 90px;
+  margin: 10px;
+  font-size: 40px; */
+
+}
+
+.menu_item {
+    margin-top: -20px;
+}
+
+.profile_widget {
+    /* border: 3px solid #46593f; */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.maps_widget {
+    /* border: 3px solid rgb(139, 0, 93); */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+
+}
+
+.weather_widget {
+    /* border: 3px solid purple; */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+
+}
+
+.calendar_widget {
+    /* border: 3px solid green; */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+
+}
+
+.emercency_services_widget {
+    /* border: 3px solid salmon; */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+
+}
+
+.forum_widget {
+    /* border: 3px solid green; */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+
+}
+
+.attractions_widget {
+    /* border: 3px solid salmon; */
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: 0 0 8px rgb(56, 77, 48);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 10px;
+    font-size: 40px;
+
+}
+
+.item {
+    grid-row: 1 / span 1;
+}
+
+.item1 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.item2 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 3;
+    /* grid-row: 4 / span 2; */
+
+}
+
+.item3 {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 2;
+
+}
+
+.item4 {
+    grid-column: 1 / span 2;
+
+    grid-row: 3 / span 2;
+
+    /* grid-column: 3 / span 1; */
+}
+
+.item5 {
+    grid-column: 1 / span 2;
+
+    grid-row: 5 / span 1;
+
+    /* grid-column: 3 / span 1; */
+}
+
+
+.item6 {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 2;
+}
+
+.item7 {
+    grid-column: 5 / span 1;
+    grid-row: 3 / span 3;
+
+}
+
+
+
+/* Map */
+#map {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Weather */
+.notification {
+    display: none;
+}
+
+.notification p {
+    color: #d40c20;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    padding: 0 0;
+}
+
+.weather-container {
+    width: 325px;
+    height: 190px;
+}
+
+.location p {
+    margin: 0;
+    /* padding: 1px; */
+    color: #293251;
+    text-align: center;
+    font-size: 20px;
+}
+
+.weather-icon {
+    width: 300px;
+    height: 114px;
+}
+
+.weather-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value {
+    width: 300px;
+    height: 20px;
+}
+
+.temperature-value p {
+    padding: 0;
+    margin: 0;
+    color: #293251;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.temperature-value span {
+    color: #293251;
+    font-size: 20px;
+}
+
+.temperature-description p {
+    /* padding: 8px; */
+    margin: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+body {
+    background-color: #b4ceaa;
+    font: 20px Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    font: 20px "Quicksand", "Calibri";
+}
+
+.slider form {
+    float: right;
+}
+
+.slider figure div {
+    float: left;
+    width: 20%;
+}
+
+.slider figure img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    background: rgba(236, 230, 219, 255);
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    animation: animate 60s infinite;
+}
+
+.slide h1 {
+    position: absolute;
+    text-align: left;
+    font-size: 60px;
+    padding-top: 250px;
+    padding-left: 50px;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide p {
+    position: absolute;
+    text-align: left;
+    font-size: 20px;
+    padding-top: 350px;
+    padding-left: 50px;
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes animate {
+    0% {
+        left: 0%;
+    }
+
+    10% {
+        left: 0%;
+    }
+
+    12% {
+        left: -100%;
+    }
+
+    22% {
+        left: -100%;
+    }
+
+    24% {
+        left: -200%;
+    }
+
+    34% {
+        left: -200%;
+    }
+
+    36% {
+        left: -300%;
+    }
+
+    46% {
+        left: -300%;
+    }
+
+    48% {
+        left: -400%;
+    }
+
+    58% {
+        left: -400%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    70% {
+        left: -300%;
+    }
+
+    72% {
+        left: -200%;
+    }
+
+    82% {
+        left: -200%;
+    }
+
+    84% {
+        left: -100%;
+    }
+
+    94% {
+        left: -100%;
+    }
+
+    96% {
+        left: -0%;
+    }
+}
+
+.forum {
+    font: 20px "Quicksand", Calibri;
+    width: 400px;
+    max-width: 400px;
+    margin: 4rem;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    float: right;
+    border-radius: 50px;
+    background: #f5f5f5;
+    position: absolute;
+    z-index: 2;
+    margin-left: 1000px;
+    margin-top: 140px;
+}
+
+.form_input,
+.form_button {
+    font: "Quicksand", Calibri;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.form>*:first-child {
+    margin-top: 0;
+}
+
+.form>*:last-child {
+    margin-bottom: 0;
+}
+
+/* Title Styles */
+.form_title {
+    margin: 2rem 2rem 0 0;
+    text-align: center;
+
+    width: 100%;
+}
+
+/* Success/Error Message Styles (YET TO BE USED) */
+.form_message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form_message--success {
+    color: #4bb544;
+}
+
+.form_message--error {
+    color: #cc3333;
+}
+
+/* Input Styles */
+.form_input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    /* Extremely Important for keeping the labels and text-fields inline*/
+    font-size: 19px;
+}
+
+/* Label Styles */
+label {
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Text-Fields Styles */
+.form_input {
+    object-fit: fill;
+    text-align: left;
+    max-height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(176, 170, 170);
+    outline: none;
+    background: #ffffff;
+    transition: background 0.2s, border-color 0.2s;
+    margin-right: 20px;
+}
+
+/* Drop Down Select Box Styles */
+.form_select {
+    width: 100%;
+    text-align: left;
+    max-height: 36px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+    background: #ece6db;
+    transition: background 0.2s, border-color 0.2s;
+    margin-right: 20px;
+}
+
+.form_input:focus {
+    border-color: #506e53;
+    background: #ffffff;
+}
+
+.form_input--error {
+    color: #cc3333;
+    border-color: #ffffff;
+}
+
+.form_input-error-message {
+    color: #cc3333;
+}
+
+/* Main Button Styles */
+.form_button {
+    width: 236px;
+    margin: 10px;
+    padding: 1rem 1rem;
+    margin-left: 6rem;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    background: #68a66f;
+}
+
+/* Button Interactivity */
+.form_button:hover {
+    background: #486a4c;
+}
+
+.form_button:active {
+    transform: scale(0.98);
+}
+
+/* Back Button Styles */
+.form_back {
+    margin-left: 12rem;
+    height: 20px;
+    width: 60px;
+    padding: 2px;
+    color: #000000;
+    border: solid black 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #afb1af;
+    text-align: center;
+}
+
+/* Specific Enter Button In Forgotten Password Styles */
+#forgotpasswordEnter {
+    width: 146px;
+    height: 65px;
+    margin-bottom: 188px;
+    text-align: center;
+}
+
+/* Back Button Interactivity */
+.form_back:hover {
+    background: #7d7d7d;
+    color: #ffffff;
+}
+
+.form_back:active {
+    transform: scale(0.98);
+}
+
+.form_text {
+    text-align: center;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#profile_img {
+    border-radius: 50%;
+    padding: 65px;
+    margin-top: -50px;
+}
+
+#name {
+    margin-top: -70px;
+}
+
+#profile_widget {
+    width: 18rem;
+    height: 15rem;
+    text-align: center;
+    border-radius: 10%;
+}
+
+#maps_widget {
+    border-radius: 10%;
+}
+
+#map {
+    width: inherit;
+    height: inherit;
+    border-radius: 10%;
+}
+
+#calendar_widget {
+    width: 25rem;
+    height: 14rem;
+    text-align: center;
+    border-radius: 15%;
+}
+
+#container {
+    display: flex;
+    background-color: aliceblue;
+    align-content: left;
+    justify-content: left;
+    padding-left: 10px;
+
+}
+
+#container div {
+    margin: 15px;
+    align-items: left;
+}
+
+#container2 {
+    display: flex;
+    background-color: aliceblue;
+    align-content: left;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+#container2 div {
+    margin: 15px;
+    align-items: left;
+}
+
+#widget4 {
+    width: 18rem;
+    height: 12rem;
+    text-align: center;
+    border-radius: 10%;
+}
+
+#widget5 {
+    height: 22rem;
+    border-radius: 8%;
+}
+
+#widget6 {
+    width: 25rem;
+    height: 23rem;
+    text-align: center;
+    border-radius: 15%;
+    text-align: left;
+}
+
+#widget6 p {
+    font-size: 14px;
+}
+
+#attraction {
+    width: 12rem;
+    height: 8rem;
+
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**CALENDER STYLE**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+html {
+    font-size: 35.5%;
+}
+
+.container {
+    /* width: 100%; */
+    /* height: 100vh; */
+    background-color: turquoise;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.test {
+    width: 300px;
+    height: 300px;
+    background-color: #d40c20;
+    margin: 10px;
+    border-radius: 10%;
+}
+
+.calendar {
+    /* width: inherit;
+  height: inherit; */
+  width: fit-content;
+  height: fit-content;
+  margin: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+    /* width: 100%; */
+    height: 8rem;
+    background-color: darkolivegreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+    /* font-size: 2.5rem; */
+    cursor: pointer;
+}
+
+.month h1 {
+    /* font-size: 3rem; */
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.month p {
+    /* font-size: 1.6rem; */
+}
+
+.weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div {
+    /* font-size: 1.5rem; */
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div {
+    /* font-size: 1.4rem; */
+    margin: 0.3rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(236, 228, 228, 0.5);
+    transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+    background-color: #b47017;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #0a9f8d;
+}
