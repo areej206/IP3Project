@@ -1,0 +1,110 @@
+<%- include('includes/header') %>
+
+  <div class="">
+    <!-- Error message flash card -->
+    <%- include('includes/flash') %>
+      <div class="slider">
+        <figure>
+
+          <div class="slide">
+            <h1>Your handy guidebook is here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod <br>tempor incididunt ut labore
+              et dolore magna aliqua. Proin libero nunc consequat
+              interdum varius sit.
+            </p>
+            <img src="images2/1.jpg" alt="Woman looking at view">
+          </div>
+
+          <div class="slide">
+            <h1>Your handy guidebook is here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod <br>tempor incididunt ut labore
+              et dolore magna aliqua. Proin libero nunc consequat
+              interdum varius sit.
+            </p>
+            <img src="images2/2.jpg" alt="Man taking picture of the view">
+          </div>
+
+          <div class="slide">
+            <h1>Your handy guidebook is here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod <br>tempor incididunt ut labore
+              et dolore magna aliqua. Proin libero nunc consequat
+              interdum varius sit.
+            </p>
+            <img src="images2/3.jpg" alt="Woman at the beach">
+          </div>
+
+          <div class="slide">
+            <h1>Your handy guidebook is here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod <br>tempor incididunt ut labore
+              et dolore magna aliqua. Proin libero nunc consequat
+              interdum varius sit.
+            </p>
+            <img src="images2/4.jpg" alt="Woman taking photo with camera">
+          </div>
+
+          <div class="slide">
+            <h1>Your handy guidebook is here!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod <br>tempor incididunt ut labore
+              et dolore magna aliqua. Proin libero nunc consequat
+              interdum varius sit.
+            </p>
+            <img src="images/6.jpg" alt="hikers on a trail">
+          </div>
+
+        </figure>
+
+
+        <div class="forum">
+          <!-- Register form start ACTION=/register -->
+          <form action="/register" method="POST" id="registration-form">
+
+            <% Promise.resolve(regErrors.forEach(function(message) { %>
+              <div id="flash" class="alert alert-danger small">
+                <%= message %>
+              </div>
+              <% })) %>
+
+              <div class="form-group">
+                <h1 class="form_title">Join Floc</h1>
+                <p class="form_text"> to get access to a handbook packed with
+                  insightful advice for your travels
+              </p>
+
+                <div class="form_input-group">
+                  <label for="loginUsername">Username:</label>
+
+                  <label for="username-register" class=""></label>
+                  <input name="username" id="username-register" class="form-control form_input" type="text"
+                    placeholder="Pick a username" autocomplete="off">
+                </div>
+
+                <div class="form_input-group">
+                  <label for="loginEmail">Email:</label>
+
+                  <label for="email-register" class=""></label>
+                  <input name="email" id="email-register" class="form-control form_input" type="text" placeholder="you@example.com"
+                    autocomplete="off">
+                </div>
+
+                <div class="form_input-group">
+                  <label for="loginPassword">Password:</label>
+
+                  <label for="password-register" class="text-muted mb-1"></label>
+                  <input name="password" id="password-register" class="form-control form_input" type="password"
+                    placeholder="Create a password">
+                </div>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit" class="py-3 mt-4 btn btn-lg btn-success btn-block">Register</button>
+
+          </form>
+        </div>
+      </div>
+  </div>
+
+  <!-- footer begins -->
+  <%- include('includes/footer') %>

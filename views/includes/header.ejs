@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= typeof(title) == "undefined" ? 'FLOC' : `${title} - FLOC` %></title>
+ 
+  <!-- DAMI Functionality stylesheet  -->
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+  <!-- DAMI  Functionality stylesheet  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="googleMaps/index_maps.js"></script>
+
+    <!-- To add a new css file below -->
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/dami_style.css">
+
+    
+    <link rel="stylesheet" href="/weather/font/Rimouski.css">
+    <link rel="stylesheet" href="/weather/style.css">
+
+    <!-- Css file list End -->
+
+</head>
+<body>
+  <header>
+  <!-- <header class="header-bar mb-3">
+    <div class="container d-flex flex-column flex-md-row align-items-center p-3">
+      <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="" style="color: #292929">FLOC</a></h4> -->
+     
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+    </div>
+  </header>
+  <!-- header ends here -->

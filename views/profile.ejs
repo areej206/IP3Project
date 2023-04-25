@@ -1,0 +1,30 @@
+<%- include('includes/header') %>
+
+  <article class="flexContainer">
+    <div>
+      <img class="menu_icon item" src="/images/menu_icon.png">
+    </div>
+    <div class="title">
+      <h1 class="title">Profile</h1>
+    </div>
+  </article>
+
+  <div id="container" class="container py-md-5 container--narrow">
+
+    <%- include('includes/flash') %>
+      <%- include('includes/profileShared') %>
+
+        <div class="list-group">
+          <% posts.forEach(function(post) { %>
+            <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
+              <img class="avatar-small" src="<%= post.author.avatar %>">
+              <strong>
+                <%= post.title %>
+              </strong> on <%= post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate() %>/<%=
+                    post.createdDate.getFullYear() %>
+            </a>
+            <% }) %>
+        </div>
+  </div>
+
+  <%- include('includes/footer') %>
