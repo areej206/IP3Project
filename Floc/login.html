@@ -68,37 +68,34 @@
 
         <div class="forum">
 
-            <form class="form" action="login.php" method="post" id="login">
-                <h1 class="form_title">Join Floc</h1>
+  <form class="form" action="login.php" method="post" id="login">
+                <h1 class="form_title">Log in</h1>
                 <p class="form_text"> Access your handbook packed with
-                    insightful advice for all your travels
+                    insightful advice for all of your travels!
                 </p>
                 <div class="form_message form_message-error"></div>
 
                 <div class="form_input-group">
-                    <label for="loginEmail">Email:</label>
-                    <input type="email" id="loginEmail" name="email" class="form_input" autofocus required>
+                    <!--<label for="loginEmail">Email:</label>-->
+                    <input type="email" id="loginEmail" name="email" class="form_input" placeholder="Email" autofocus required>
                     <div class="form_input-error-message"></div>
                 </div>
 
                 <div class="form_input-group">
-                    <label for="loginPassword">Password:</label>
-                    <input type="password" id="loginPassword" name="password" class="form_input" autofocus required>
+                    <!--<label for="loginPassword">Password:</label> -->
+                    <input type="password" id="loginPassword" name="password" class="form_input" placeholder="Password" autofocus required>
                     <div class="form_input-error-message"></div>
 
                 </div>
 
-                <p class="form_text">
-                    <a href="./Forgotten%20Password.html" class="form__link">Forgot Password</a>
-                </p>
-
                 <button class="form_button" type="submit">Log In</button>
 
-                <h2>New User?</h2>
+                <p class="form_text" id="forgot-password">
+                    <a href="./Forgotten%20Password.html" class="form_link">Forgot Password</a>
+                </p>
 
-                <a href='./Register.html'>
-                    <button class="form_button" type="button">Register</button> <br>
-                </a>
+                <br>
+                <p class="form_text">Don't have an account? <a href='./Register.html' class="form_link">Register</a></p>
 
             </form>
 
